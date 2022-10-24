@@ -1,0 +1,21 @@
+GROUP BY
+
+/// 1
+SELECT COUNT(*) AS `iscritti`, YEAR(`enrolment_date`) AS `year`
+FROM `students`
+GROUP BY `year`;
+
+/// 2
+SELECT COUNT(*) AS `numero_insegnati`, `office_address` AS `indirizzo_ufficio`
+FROM `teachers`
+GROUP BY `office_address`;
+
+/// 3
+SELECT `exam_id` AS `id_appello`, AVG(`vote`) AS `media_voti_appello`
+FROM `exam_student`
+GROUP BY `id_appello`;
+
+/// 4
+SELECT COUNT(`name`) AS `numero_corsi_laurea`, `department_id`
+FROM `degrees`
+GROUP BY `department_id`;
