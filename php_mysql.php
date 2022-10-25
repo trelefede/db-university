@@ -14,7 +14,19 @@
         define("DB_PASSWORD", "root");
         define("DB_NAME", "db_university");
 
+        $conn = new mysqli(DB_SERVERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
+        if($conn && $conn -> connect_error){
+            echo('Connection Failed');
+            die();
+        }
+
+        echo('Connection OK!');
+
+        $sql = 'SELECT * FROM `students`';
+
+        $result = $conn -> query($sql);
+    
 
     ?>
 
