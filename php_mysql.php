@@ -23,7 +23,7 @@
 
         echo('Connection OK!');
 
-        $sql = 'SELECT * FROM `students`';
+        $sql = 'SELECT `name`, `surname`, `email` FROM `students`';
 
         $result = $conn -> query($sql);
     
